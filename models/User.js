@@ -15,11 +15,11 @@ const userSchema = mongoose.Schema({
   emailUser: {
     type: String,
     required: [true, "veuillez entrez votre email ! "],
-    unique: true,
+    unique: [true, "Ce email existe déjà !"],
   },
   password: {
     type: String,
-    required: [true, "veuillez entrez votre mot de passe ! "],
+    required: [true, "Veuillez entrez votre mot de passe ! "],
   },
 });
 
