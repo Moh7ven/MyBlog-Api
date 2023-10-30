@@ -14,6 +14,10 @@ const blogSchema = mongoose.Schema({
     type: String,
     required: [true, "Veuillez entrer le titre du blog"],
   },
+  createdAtBlog: {
+    type: String,
+    required: true,
+  },
   userId: { type: String, required: true },
 });
 

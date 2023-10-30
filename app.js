@@ -26,7 +26,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.use("/api/auth", userRoutes);
-app.use("/api/blog", blogRoutes);
+app.use("/api/blog/", blogRoutes);
 app.use("/images", express.static(path.join(__dirname, "images")));
 
 module.exports = app;
