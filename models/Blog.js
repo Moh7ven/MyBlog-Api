@@ -19,6 +19,7 @@ const blogSchema = mongoose.Schema({
     required: true,
   },
   userId: { type: String, required: true },
+  Username: { type: String, required: true },
 });
 
 module.exports = mongoose.model("blog", blogSchema);

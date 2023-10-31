@@ -2,6 +2,7 @@ const fs = require("fs");
 
 const auth = require("../middleware/auth");
 const Blog = require("../models/Blog");
+const User = require("../models/User");
 
 //FONCTION POUR CREER UN BLOG
 exports.createBlog = (req, res, next) => {
@@ -42,6 +43,9 @@ exports.getAllBlogs = (req, res, next) => {
 exports.getUserBlogs = (req, res, next) => {
   Blog.find({ userId: req.auth.userId })
     .then((blogs) => {
+      /*  const idsDesUsers = blogs.map((blog) => blog.userId);
+
+      User.find(); */
       res.status(200).json(blogs);
     })
     .catch((error) => {
