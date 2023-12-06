@@ -10,12 +10,12 @@ const userSchema = mongoose.Schema({
   Username: {
     type: String,
     required: [true, "veuillez entrez votre Username ! "],
-    unique: true,
+    unique: "Ce pseudo est déjà utilisé. Veuillez en choisir un autre.",
   },
   emailUser: {
     type: String,
     required: [true, "veuillez entrez votre email ! "],
-    unique: [true, "Ce email existe déjà !"],
+    unique: "Cet email est déjà utilisé. Veuillez en choisir un autre.",
   },
   password: {
     type: String,
