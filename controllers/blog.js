@@ -43,7 +43,6 @@ exports.getAllBlogs = (req, res, next) => {
 exports.getUserBlogs = (req, res, next) => {
   Blog.find({ userId: req.auth.userId })
     .then((blogs) => {
-      /*  const idsDesUsers = blogs.map((blog) => blog.userId);
 
       User.find(); */
       res.status(200).json(blogs);
@@ -51,9 +50,6 @@ exports.getUserBlogs = (req, res, next) => {
     .catch((error) => {
       res.status(200).json({ error });
     });
-  /* 
-  res.json({ message: "hey" });
-  console.log(req.auth.userId); */
 };
 
 //ROUTE POUR RECUPÉRER UN BLOG
