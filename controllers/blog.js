@@ -43,8 +43,6 @@ exports.getAllBlogs = (req, res, next) => {
 exports.getUserBlogs = (req, res, next) => {
   Blog.find({ userId: req.auth.userId })
     .then((blogs) => {
-
-      User.find(); */
       res.status(200).json(blogs);
     })
     .catch((error) => {
